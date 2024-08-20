@@ -594,6 +594,14 @@ video {
   bottom: 0px;
 }
 
+.bottom-\[5\] {
+  bottom: 5;
+}
+
+.bottom-\[5\%\] {
+  bottom: 5%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -805,6 +813,11 @@ video {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -923,5 +936,10 @@ video {
 
   .sm\:w-64 {
     width: 16rem;
+  }
+
+  .sm\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }

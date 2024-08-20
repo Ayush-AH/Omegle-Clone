@@ -40,10 +40,10 @@
             </div>
         </div>
         <div id="video-panel" class="absolute hidden top-0 left-0 w-full h-full bg-black  z-10">
-            <video id="remoteVideo" class="w-full h-[50%] sm:h-full " autoplay src=""></video>
+            <video id="remoteVideo" class="w-full h-[50%] sm:h-full object-cover sm:object-contain" autoplay src=""></video>
             <video id="localVideo" class="w-full sm:w-64 object-cover rounded-md h-[50%] sm:h-60 absolute bottom-0 sm:bottom-[10%] right-0 sm:right-[5%]" autoplay muted
                 src=""></video>
-            <div id="controlls" class="flex gap-10 text-xl text-white absolute bottom-[10%] left-1/2 -translate-x-1/2">
+            <div id="controlls" class="flex gap-10 text-xl text-white absolute bottom-[5%] sm:bottom-[10%] left-1/2 -translate-x-1/2">
                 <div id="mutebtn" class="w-14 h-14 cursor-pointer bg-zinc-700 rounded-full flex items-center justify-center">
                     <i class="ri-mic-fill"></i>
                 </div>
