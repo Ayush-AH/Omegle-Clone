@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="relative w-full h-screen bg-zinc-300 overflow-hidden">
+       <div id="chat-panel" class="w-full h-screen absolute">
+        <div class="w-full px-4 h-[10%] flex bg-white items-center justify-between">
+            <h1 class="text-2xl font-semibold text-black tracking-tight">Omegle Chat</h1>
+            <button id="start-call" class="px-3 py-2 bg-blue-600 text-white font-semibold rounded">Start Video Call</button>
+        </div>
+        <div id="middle-container" class="w-full h-[80%] flex  items-center justify-between">
+            <h1 id="connecting" class="text-center w-full text-xl opacity-60 font-semibold"><em>Finding user...⏳</em></h1>
+            <div id="message-container" class="hidden w-full h-full  overflow-y-auto p-2 px-4">
+               <!-- Messages -->
+            </div>
+        </div>
+        <div class="w-full px-4 h-[10%] flex items-center bg-white">
+            <form action="" class="w-full flex items-center justify-between gap-10">
+                <input id="message-input" autofocus type="text" class="w-full p-2 outline-none border-2 rounded border-black/20"
+                    placeholder="Enter a Message...">
+                <button class="px-4 py-2 bg-blue-600 text-white font-semibold rounded">Send</button>
+            </form>
+        </div>
+       </div>
+        <div id="call-panel" class="hidden w-full h-full bg-black/50 absolute top-0 left-0">
+            <div class="absolute  top-[45%] text-center left-1/2 -translate-x-[50%] -translate-y-[50%]">
+                <h1 class="text-3xl font-semibold mb-3">Incoming call..</h1>
+                <div class="flex items-center gap-6 bg-white px-4 py-3 rounded">
+                    <button id="accept-call" class="px-5 py-1 hover:bg-green-700 bg-green-600 text-white rounded">Accept</button>
+                    <button id="reject-call" class="px-5 py-1 hover:bg-red-700 bg-red-600 text-white rounded">Reject</button>
+                </div>
+            </div>
+        </div>
+        <div id="video-panel" class="absolute hidden top-0 left-0 w-full h-full bg-black  z-10">
+            <video id="remoteVideo" class="w-full h-full " autoplay src=""></video>
+            <video id="localVideo" class="w-64 object-cover rounded-md h-60 absolute bottom-[10%] right-[5%]" autoplay muted
+                src=""></video>
+            <div id="controlls" class="flex gap-10 text-xl text-white absolute bottom-[10%] left-1/2 -translate-x-1/2">
+                <div id="mutebtn" class="w-14 h-14 cursor-pointer bg-zinc-700 rounded-full flex items-center justify-center">
+                    <i class="ri-mic-fill"></i>
+                </div>
+                <div id="camerabtn" class="w-14 h-14 cursor-pointer bg-zinc-700 rounded-full flex items-center justify-center">
+                    <i class="ri-video-on-fill"></i>
+                </div>
+                <div id="callbtn" class="w-14 h-14 cursor-pointer bg-red-600 rounded-full flex items-center justify-center">
+                    <i class="ri-phone-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>
